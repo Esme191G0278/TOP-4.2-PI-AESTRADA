@@ -1,0 +1,45 @@
+﻿<Window x:Class="Actividad_4.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Actividad_4"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="810" Background="DarkGreen">
+    
+        <DockPanel Margin="40" Background="Black" >
+       
+        <DockPanel.Resources>
+            <Style TargetType="TextBlock">
+                <Setter Property="FontSize" Value="40"></Setter>
+                <Setter Property="Foreground" Value="DarkOrange"></Setter>
+                <Setter Property="Margin" Value="20"></Setter>
+                
+            </Style>
+        </DockPanel.Resources>
+            
+        
+        <WrapPanel DockPanel.Dock="Top" Margin="20" HorizontalAlignment="Center">
+            <Border BorderThickness="2,2,2,2 " BorderBrush="Aquamarine" Margin="2">
+                <TextBlock >MIN</TextBlock>
+            </Border>
+            <Border BorderThickness="2,2,2,2 " BorderBrush="Aquamarine" Margin="2">
+                <TextBlock>05 : 58</TextBlock>
+            </Border>
+            <Border BorderThickness="2,2,2,2 " BorderBrush="Aquamarine" Margin="2">
+                <TextBlock >SEC</TextBlock>
+                
+            </Border>
+        </WrapPanel >
+        <Border BorderThickness="2,2,2,2 " BorderBrush="Aquamarine" Margin="15" Height="100" Width="220">
+            <TextBlock VerticalAlignment="Center" >88 FALCONS</TextBlock>
+        </Border >
+        <Border BorderThickness="2,2,2,2 " BorderBrush="Aquamarine" Margin="5" Height="100" Width="220">
+            <TextBlock VerticalAlignment="Center">4 PERIOD</TextBlock>
+        </Border>
+        <Border BorderThickness="2,2,2,2 " BorderBrush="Aquamarine" Margin="5" Height="100" Width="220">
+            <TextBlock DockPanel.Dock="Left" VerticalAlignment="Center">88 GUEST</TextBlock>
+        </Border>
+    </DockPanel>
+    
+</Window>
