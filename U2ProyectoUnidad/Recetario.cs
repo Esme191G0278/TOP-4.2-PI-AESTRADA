@@ -150,7 +150,7 @@ namespace U2ProyectoUnidad
 
         public void Editar()
         {
-            Cargar();
+            
             Error="";
             if (string.IsNullOrWhiteSpace(Receta.Nombre))
             {
@@ -181,6 +181,7 @@ namespace U2ProyectoUnidad
                     return;
                 }
             }
+           
             Recetas[indiceRecetaOriginal] = Receta;
             Guardar();
             CambiarVista(Vistas.Lista);
