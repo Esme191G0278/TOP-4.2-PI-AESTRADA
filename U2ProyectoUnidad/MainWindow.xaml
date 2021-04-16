@@ -21,12 +21,13 @@
     <Grid Margin="10">
         <DockPanel Margin="5">
             <TextBlock DockPanel.Dock="Top" FontSize="25" FontWeight="Bold">Recetas</TextBlock>
-            <ListBox Width="300"  Name="listbox" ItemsSource="{Binding Path=Receta.Nombre}" MouseDoubleClick="listbox_MouseDoubleClick" KeyDown="listbox_KeyDown">
+            <ListBox Width="300"  Name="listbox" Background="Pink" ItemsSource="{Binding Path=Receta.Nombre}" MouseDoubleClick="listbox_MouseDoubleClick" KeyDown="listbox_KeyDown">
                 <ListBox.ItemTemplate>
                     <DataTemplate>
                         <DockPanel Margin="10">
                             <DockPanel.ContextMenu>
                                 <ContextMenu Background="Pink">
+                                    <Label Content="{Binding Path=Receta.Nombre }" ></Label>
                                         <MenuItem Header="Editar..." Foreground="White" Click="MenuItem_Click"></MenuItem>
                                         <MenuItem Command="{Binding Source={x:Reference recetario}, Path=CambiarVistaCommand}" CommandParameter="{x:Static local:Vistas.Eliminar}" Header="Eliminar.." ></MenuItem>
                                     </ContextMenu>
@@ -43,7 +44,7 @@
                     <TextBlock Text="{Binding Receta.Ingredientes}"></TextBlock>
                     <Label>Procedimiento</Label>
                     <TextBlock Text="{Binding Receta.Procedimiento}"></TextBlock>
-                    <Image  Source="{Binding Path=Receta.Imagen, Converter={StaticResource nullImageConverter}}"></Image>
+                    <Image MaxWidth="300" MaxHeight="300" Source="{Binding Path=Receta.Imagen, Converter={StaticResource nullImageConverter}}"></Image>
                     <StackPanel.Style>
                         <Style TargetType="StackPanel">
                             <Setter Property="Visibility" Value="Visible"></Setter>
